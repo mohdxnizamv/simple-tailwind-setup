@@ -1,6 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  variants: {
+    extend: {
+      display: ["group-focus"],
+      opacity: ["group-focus"],
+      inset: ["group-focus"],
+    },
+  },
   content: ["**/*.html"],
+  darkMode: "class",
   theme: {
     screens: {
       sm: "360px",
@@ -9,17 +17,14 @@ module.exports = {
       xl: "1440px",
     },
     extend: {
-      fontFamily: {
-        Alata: ["Alata", "sans-serif"],
-      },
       colors: {
-        softYellow: "#FFDE00",
-        softBlue: "hsl(231, 69%, 60%)",
-        softGray: "#E3E1E3",
-        softGray1: "#888888",
-        softRed: "hsl(0, 94%, 66%)",
-        grayishBlue: "hsl(229, 8%, 60%)",
-        veryDarkBlue: "hsl(229, 31%, 21%)",
+        green: "#353B17",
+        softGreen: "#4F5727",
+        blue: "#484DFF",
+      },
+      backgroundImage: {
+        "hero-pattern": "url('../image/wallpaper-ai.jpg')",
+        "footer-texture": "url('../image/')",
       },
     },
   },
